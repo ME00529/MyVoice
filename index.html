@@ -6,19 +6,41 @@
 <title>Dark Blue Black  and White Modern Elegant Opening Curtains Coming Soon Animated Video Your Story</title>
 <style>
 /* pdf2html base stylesheet — fixed-layout, faithful page reproduction. */
-html, body { margin: 0; padding: 0; }
-body { background: #e8e8e8; }
-
+html, body { 
+	margin: 0; 
+	padding: 0; 
+	width: 100%;
+	overflow-x: hidden; /* Stops horizontal scrolling on phones */
+}
+body { 
+	background: #e8e8e8; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
 /* One page = a positioning context sized to the PDF page box (CSS px). isolation:isolate makes it a
    stacking context so each page's per-element paint-order z-indexes stay self-contained (and the fixed
    sidebars keep sitting above every page's content, form fields included). */
 .page {
 	position: relative;
 	isolation: isolate;
-	margin: 8px auto;
+	width: 1080px;
+	height: 1920px;
 	background: #fff;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 	overflow: hidden;
+	transform-origin: top center; /* Ensures the page scales from the center top down */
+}
+/* Responsive adjustments for screens smaller than the template canvas */
+@media (max-width: 1080px) {
+	body {
+		align-items: flex-start; /* Aligns to top for natural scrolling on mobile */
+	}
+	.page {
+		transform: scale(calc(100vw / 1080));
+		margin: 0 auto calc(1920px * (1 - (100vw / 1080))) auto; /* Adjusts bottom spacing */
+	}
 }
 
 /* The text-suppressed background raster (vectors + images), behind the text. */
