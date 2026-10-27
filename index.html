@@ -1,24 +1,19 @@
-html, body { 
-    margin: 0; 
-    padding: 0; 
-    width: 100%;
-    overflow-x: hidden; /* Prevents ugly horizontal scrolling */
-}
-body { 
-    background: #e8e8e8; 
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dark Blue Black  and White Modern Elegant Opening Curtains Coming Soon Animated Video Your Story</title>
+<style>
+/* pdf2html base stylesheet — fixed-layout, faithful page reproduction. */
+html, body { margin: 0; padding: 0; }
+body { background: #e8e8e8; }
 
-/* Force the PDF layout container to scale down on smaller screens */
+/* One page = a positioning context sized to the PDF page box (CSS px). isolation:isolate makes it a
+   stacking context so each page's per-element paint-order z-indexes stay self-contained (and the fixed
+   sidebars keep sitting above every page's content, form fields included). */
 .page {
-    max-width: 100%;
-    height: auto !important; /* Overrides the fixed PDF height */
-    position: relative;
-    box-sizing: border-box;
-    margin: 0 auto; /* Centers the content on large laptop screens */
-}
-
-/* Ensure any internal elements or video layers don't burst out of the screen */
-.page * {	position: relative;
+	position: relative;
 	isolation: isolate;
 	margin: 8px auto;
 	background: #fff;
